@@ -1,0 +1,9 @@
+# Re run to bundle install
+docker-composer build
+
+docker-compose run --rm web rails db:create
+
+
+docker-compose run --rm we
+
+docker run --rm -p 4040:4040 -p 5000:5000 -e NGROK_PORT="host.docker.internal:3000" -e NGROK_AUTH="1Wif6bTPuGVQuZZFgdI7aQaYcpV_6vq7ozqKJvzzYugCLav1J" -e NGROK_SUBDOMAIN=shopify-smk wernight/ngrok

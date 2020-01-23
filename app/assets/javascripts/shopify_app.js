@@ -6,4 +6,5 @@ document.addEventListener('DOMContentLoaded', () => {
     debug: data.debug === 'true',
     forceRedirect: true
   });
+  console.log('shopify_app');
 });
