@@ -2,8 +2,8 @@ ShopifyApp.configure do |config|
   config.application_name = "My Shopify App"
   # config.api_key = ENV['SHOPIFY_API_KEY']
   # config.secret = ENV['SHOPIFY_API_SECRET']
-  config.api_key = '6b235b0c382686d0a730967510293eeb'
-  config.secret = 'b3de8cf8a2e3e352959214c48e07f267'
+  config.api_key = 'dc840c1f9859f661d9beca6414e423bc'
+  config.secret = '2be57934f161d050966b1487e26f242d'
   config.old_secret = ""
   config.scope = "read_products" # Consult this page for more scope options:
                                  # https://help.shopify.com/en/api/getting-started/authentication/oauth/scopes
