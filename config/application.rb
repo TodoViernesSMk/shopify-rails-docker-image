@@ -17,3 +17,19 @@ module Myapp
     # the framework and any gems in your application.
   end
 end
+
+
+Raven.configure do |config|
+  config.dsn = 'https://d3a83ac75b9c4a899aa45140bd5a7f55:5fabe982b17d433dbfcf3b4cf29dee3f@sentry.io/1901515'
+end
+
+class ApplicationController < ActionController::Base
+  before_action :set_raven_context
+
+  private
+
+  def set_raven_context
+    Raven.user_context(id: session[:current_user_id]) # or anything else in session
+    Raven.extra_context(params: params.to_unsafe_h, url: request.url)
+  end
+end
